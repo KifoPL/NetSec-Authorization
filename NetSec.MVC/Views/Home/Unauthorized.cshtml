@@ -1,0 +1,12 @@
+﻿@model UnauthorizedModel
+
+@{
+    ViewBag.Title = "Unauthorized!";
+    Layout = "_Layout";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="alert alert-danger p-2">
+    <p><b>@((int)Model.HttpStatusCode)</b> - You cannot access <b>@(Model.Resource)</b>, because <i>@Model.Reason</i>.</p>
+</div>
